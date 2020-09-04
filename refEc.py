@@ -69,9 +69,11 @@ import urllib
 
 import requests
 
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 
 # from timer import timer
+
+refferal_code = input("Enter your referral code : ")
 
 names = []
 
@@ -97,7 +99,7 @@ def fetch(session, url):
 
 			}
 	
-	postData = '''itemtype=embed&layout=captcha&c=c&txt_name='''+name+'''&txt_email='''+urllib.parse.quote_plus(email)+'''&LeadSource=upviral+referral&agree=agree&reflink=Xs46546963&refshare=&lp_id=&uv_submit=submit&opacity=0.6&widget=iframe&close_popup=no&k=0%2F&call=ajax&camp=103655&a=a&captcha=captcha'''
+	postData = '''itemtype=embed&layout=captcha&c=c&txt_name='''+name+'''&txt_email='''+urllib.parse.quote_plus(email)+'''&LeadSource=upviral+referral&agree=agree&reflink='''+refferal_code+'''&refshare=&lp_id=&uv_submit=submit&opacity=0.6&widget=iframe&close_popup=no&k=0%2F&call=ajax&camp=103655&a=a&captcha=captcha'''
 
 	with session.post(url,headers = head,data = postData) as response:
 	
