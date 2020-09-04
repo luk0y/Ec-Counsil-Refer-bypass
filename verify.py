@@ -41,12 +41,12 @@ if __name__ == '__main__':
             executor.shutdown(wait=True)
 
 
-file_q = open('id.txt', 'w', encoding='utf-8')
+#file_q = open('id.txt', 'w', encoding='utf-8')
 
-for i in ids:
-    file_q.write(str(i) + '\n')
+#for i in ids:
+#    file_q.write(str(i) + '\n')
 
-file_q.close()
+#file_q.close()
 
 print("Stage-2 Started")
 #State-2 starting from here
